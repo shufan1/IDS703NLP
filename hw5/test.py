@@ -23,6 +23,7 @@ def lda_gen(vocabulary,alpha,beta,xi):
 
 
 def test():
+
     """Test the LDA generator."""
     vocabulary = [
         "bass", "pike", "deep", "tuba", "horn", "catapult",
@@ -34,6 +35,8 @@ def test():
     ])
     alpha = np.array([0.2, 0.2, 0.2])
     xi = 50
+    # np.random.seed(1)
+
     documents = [
         lda_gen(vocabulary, alpha, beta, xi)
         for _ in range(100)
